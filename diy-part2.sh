@@ -18,3 +18,6 @@ git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-p
 
 # 修改概览里时间显示为中文数字
 sed -i 's/os.date()/os.date("%Y年%m月%d日") .. " " .. translate(os.date("%A")) .. " " .. os.date("%X")/g' package/lean/autocore/files/x86/index.htm
+
+./scripts/feeds update -a
+./scripts/feeds install -a
